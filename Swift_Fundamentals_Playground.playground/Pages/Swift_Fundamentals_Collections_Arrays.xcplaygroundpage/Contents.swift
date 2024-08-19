@@ -8,6 +8,8 @@ import UIKit
 
 // Array<Element> and [Element] both functionally identical
 var cities: Array<String> = []
+//var cities: [String] = []
+//var cities: [String]()
 var districts: [String] = ["District 10"]
 
 print("there are \(cities.count) cities")

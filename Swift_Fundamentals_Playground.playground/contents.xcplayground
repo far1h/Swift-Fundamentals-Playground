@@ -3,5 +3,9 @@
     <pages>
         <page name='Swift_Fundamentals_Collections_Arrays'/>
         <page name='Swift_Fundamentals_Playground_Basics_and_Strings'/>
+        <page name='Arrays_Exercise_1'/>
+        <page name='Untitled Page'/>
+        <page name='Arrays_Exercise_2'/>
+        <page name='Arrays_Exercise_3'/>
     </pages>
 </playground>
