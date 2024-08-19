@@ -170,3 +170,60 @@ let newString = String(continentSubstring)
 print("\(newString)")
 print("-------------")
 
+/// Comparison of Strings
+///
+/// String and Character comparison
+print("string and character comparison")
+let string1 = "North America"
+let string2 = "North America"
+/// String/characters are equal if their extended grapheme are canonically equivalent
+/// Same linguistic meaning and appearance, even if underlying Unicode scalars are different.
+if string1 == string2 {
+  print("\(string1) and \(string2) are equal")
+}
+
+/// café (uses latin small letter e with acute)
+let cafe1 = "caf\u{E9}"
+
+// café (uses latin small letter e and combines acute accent)
+let cafe2 = "caf\u{65}\u{301}"
+
+if cafe1 == cafe2 {
+  print("both \(cafe1) and \(cafe2) are equal")
+}
+print("-------------")
+
+/// Prefix Equality
+print("prefix and suffix comparison")
+let countries = [
+  "Ireland",
+  "Italy",
+  "France",
+  "Germany",
+  "Uruguay",
+  "United States of America",
+  "United Kingdom",
+  "United Arab Emirates"
+]
+
+for country in countries {
+  let prefix = "United"
+  if country.hasPrefix(prefix) {
+      print("\(country) has prefix \(prefix)")
+  }
+  let suffix = "America"
+  if country.hasSuffix(suffix) {
+      print("\(country) has suffix \(suffix)")
+  }
+}
+print("-------------")
+
+print("unicode representation")
+
+for codeUnit in continent.utf16 {
+  print("\(codeUnit)")
+}
+
+for codeUnit in continent.utf8 {
+  print("\(codeUnit)")
+}
