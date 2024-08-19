@@ -160,3 +160,13 @@ continent.removeSubrange(range)
 print("\(continent)")
 print("-------------")
 
+/// Substrings
+/// Substrings and String both conform to StringProtocol
+/// and share similar functions.
+print("substring")
+let index = continent.firstIndex(of: " ") ?? continent.endIndex
+let continentSubstring = continent[..<index]
+let newString = String(continentSubstring)
+print("\(newString)")
+print("-------------")
+
