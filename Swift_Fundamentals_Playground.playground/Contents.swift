@@ -110,3 +110,53 @@ print("start index = \(startIndex)")
 print(continent[startIndex])
 print("-------------")
 
+let endIndex = continent.endIndex
+print("end index = \(endIndex)")
+print("-------------")
+
+// Runtime error
+//print(continent[endIndex])
+
+let beforeIndex = continent.index(before: endIndex)
+print("beforeIndex = \(beforeIndex)")
+print(continent[beforeIndex])
+print("-------------")
+
+let afterIndex = continent.index(after: startIndex)
+print("afterIndex = \(afterIndex)")
+print(continent[afterIndex])
+print("-------------")
+
+let offsetIndex = continent.index(startIndex,
+                                offsetBy: 3)
+print("offsetIndex = \(offsetIndex)")
+print(continent[offsetIndex])
+print("-------------")
+
+// Run-time error
+// print(continent[endIndex])
+
+print("iterate over continent using indices")
+for index in continent.indices {
+  print("\(continent[index])")
+}
+print("-------------")
+
+print("insert character at the end of continent string")
+continent.insert(":",
+               at: continent.endIndex)
+print("\(continent)")
+print("-------------")
+
+print("remove character at the end of continent string")
+continent.remove(at: continent.index(before: continent.endIndex))
+print("\(continent)")
+print("-------------")
+
+print("string ranges")
+let range = continent.index(continent.endIndex,
+                          offsetBy: -4)..<continent.endIndex
+continent.removeSubrange(range)
+print("\(continent)")
+print("-------------")
+
